@@ -17,13 +17,29 @@ output(getSentence(["Bist","du","Max"],"Q"));
 output(getSentence(["Ich","bin"],"E"));
 output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
 
-function getSentence(arr,op) {
-   
-   
-   
-     return "toDo";
-}
-
+// Lösung 1
+function getSentence(arr, op) {
+    if (op === "S") {
+      // Satz erstellen, indem alle Elemente des Arrays mit Leerzeichen verbunden werden
+      return arr.join(" ");
+    } else if (op === "Q") {
+      // Satz erstellen, indem alle Elemente des Arrays mit Leerzeichen verbunden werden und ein Fragezeichen am Ende hinzugefügt wird
+      return arr.join(" ") + "?";
+    } else if (op === "E") {
+      // Satz erstellen, indem alle Elemente des Arrays ohne Leerzeichen verbunden werden
+      return arr.join("");
+    } else {
+      // Wenn die übergebene Operation ungültig ist, wird ein Fehler zurückgegeben
+      return "Ungültige Operation";
+    }
+  }
+  
+  // mögliche Tests:
+  console.log(getSentence(["Ich","bin","Max"], "S")); // Ausgabe: "Ich bin Max"
+  console.log(getSentence(["Bist","du","Max"], "Q")); // Ausgabe: "Bist du Max?"
+  console.log(getSentence(["Ich","bin"], "E")); // Ausgabe: "Ichbin"
+  console.log(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"], "Q"));
+  // Ausgabe: "Ich hätt gern die Platt von dene zwei diwodaso Spass mache, habbe Sie die?"
 
 
 // Modul: Ausgabe in Konsole : Test
