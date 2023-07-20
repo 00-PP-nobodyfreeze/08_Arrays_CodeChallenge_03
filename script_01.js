@@ -17,7 +17,7 @@ output(getSentence(["Bist","du","Max"],"Q"));
 output(getSentence(["Ich","bin"],"E"));
 output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
 
-// Lösung 1
+// Lösung 1 / if else
 // function getSentence(arr, op) {
 //     if (op === "S") {
 //       // Satz erstellen, indem alle Elemente des Arrays mit Leerzeichen verbunden werden
@@ -34,7 +34,7 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
 //     }
 //   }
   
-  // Lösung 2
+  // Lösung 2 Mapping
   function getSentence(arr, op) {
     // Mapping der Operationen zu den gewünschten Satzverbindungen
     const sentenceMap = {
@@ -52,13 +52,6 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
     const separator = sentenceMap[op];
     return arr.join(separator) + (op === "Q" ? "?" : "");
   }
-
-  // mögliche Tests:
-  console.log(getSentence(["Ich","bin","Max"], "S")); // Ausgabe: "Ich bin Max"
-  console.log(getSentence(["Bist","du","Max"], "Q")); // Ausgabe: "Bist du Max?"
-  console.log(getSentence(["Ich","bin"], "E")); // Ausgabe: "Ichbin"
-  console.log(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"], "Q"));
-  // Ausgabe: "Ich hätt gern die Platt von dene zwei diwodaso Spass mache, habbe Sie die?"
 
 
 // Modul: Ausgabe in Konsole : Test
